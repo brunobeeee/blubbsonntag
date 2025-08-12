@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload to SFTP server
-        uses: Dylan700/sftp-upload-action@v1
+        uses: Dylan700/sftp-upload-action@latest
         with:
           server: ${{ secrets.SFTP_SERVER }}
           username: ${{ secrets.SFTP_USER }}
