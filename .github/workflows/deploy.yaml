@@ -19,3 +19,4 @@ jobs:
           server-dir: /
           local-dir: ./public/
           security: strict
+          dangerous-clean-slate: true
