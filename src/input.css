@@ -71,3 +71,19 @@ body {
     margin-top: auto;
     margin-bottom: auto;
 }
+
+/* Google Reviews */
+.es-review-background-container {
+    color: white;
+    background: rgba(255, 255, 255, 10);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%)!important;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3)!important;
+}
+
+.WidgetBackground__ContentContainer-sc > *:last-child {
+    display: none!important;
+}

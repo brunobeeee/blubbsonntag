@@ -573,6 +573,40 @@ video {
   }
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .icon{
   color: var(--color-content);
   fill: var(--color-content);
@@ -780,6 +814,10 @@ video {
   line-height: 1.25;
 }
 
+.static{
+  position: static;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -803,6 +841,10 @@ video {
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .flex{
@@ -882,6 +924,14 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.opacity-75{
+  opacity: 0.75;
+}
+
+.opacity-50{
+  opacity: 0.5;
 }
 
 .shadow-lg{
@@ -970,4 +1020,21 @@ body {
   opacity: .5;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+/* Google Reviews */
+
+.es-review-background-container {
+  color: white;
+  background: rgba(255, 255, 255, 10);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%)!important;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3)!important;
+}
+
+.WidgetBackground__ContentContainer-sc > *:last-child {
+  display: none!important;
 }
