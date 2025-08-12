@@ -12,7 +12,7 @@ module.exports = {
                 info: colors.blue,
                 critical: colors.red,
                 positive: colors.green,
-                urge: colors.purple,
+                urge: '#E6480F',
                 warning: colors.yellow,
                 gray: colors.gray, // needed for a17t
                 dark: '#0A0311',
