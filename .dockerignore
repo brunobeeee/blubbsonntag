@@ -1,0 +1,9 @@
+.github
+.git
+.DS_STORE
+.env
+.env.prod
+
+node_modules
+dist
+.parcel-cache

@@ -1,0 +1,11 @@
+services:
+  tailwind:
+    build: .
+    container_name: blubbsonntag-tw
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./tailwind.config.js:/app/tailwind.config.js
+    tty: true # otherwise the container will exit immediately
+    ports:
+      - "4000:3000"
