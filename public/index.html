@@ -29,26 +29,27 @@
 
     </section>
 
-    <!-- Countdown -->
-    <section class="section mt-5 flex flex-row justify-between text-center">
-      <div class="frosted countdown-item">
-        <h1 class="heading">3</h1>
-        <h5 class="text-xs">Tage</h5>
-      </div>
-      <img src="colon.svg" alt="Doppelpunkt" class="colon" />
-      <div class="frosted countdown-item">
-        <h1 class="heading">12</h1>
-        <h5 class="text-xs">Stunden</h5>
-      </div>
-      <img src="colon.svg" alt="Doppelpunkt" class="colon" />
-      <div class="frosted countdown-item">
-        <h1 class="heading">24</h1>
-        <h5 class="text-xs">Minuten</h5>
-      </div>
-      <img src="colon.svg" alt="Doppelpunkt" class="colon" />
-      <div class="frosted countdown-item">
-        <h1 class="heading">33</h1>
-        <h5 class="text-xs">Sekunden</h5>
+    <section id="countdown-section" class="section mt-5">
+      <div id="countdown" class="flex flex-row justify-between text-center">
+        <div class="frosted countdown-item">
+          <h1 id="days" class="heading">0</h1>
+          <h5 class="text-xs">Tage</h5>
+        </div>
+        <img src="colon.svg" alt="Doppelpunkt" class="colon" />
+        <div class="frosted countdown-item">
+          <h1 id="hours" class="heading">0</h1>
+          <h5 class="text-xs">Stunden</h5>
+        </div>
+        <img src="colon.svg" alt="Doppelpunkt" class="colon" />
+        <div class="frosted countdown-item">
+          <h1 id="minutes" class="heading">0</h1>
+          <h5 class="text-xs">Minuten</h5>
+        </div>
+        <img src="colon.svg" alt="Doppelpunkt" class="colon" />
+        <div class="frosted countdown-item">
+          <h1 id="seconds" class="heading">0</h1>
+          <h5 class="text-xs">Sekunden</h5>
+        </div>
       </div>
     </section>
 
@@ -78,6 +79,66 @@
       } else {
         document.documentElement.classList.remove('dark');
       }
+
+      function getNextSunday20(now) {
+        // Sun is 0 in JavaScript Date
+        const day = now.getDay();
+        let daysUntil = (7 - day); // Days until next Sun
+        if (day === 0 && now.getHours() < 20) {
+          daysUntil = 0; // Now is Sun but before 20
+        }
+        if (day === 0 && now.getHours() >= 20) {
+          daysUntil = 7; // After 20 on Sunday, next Sunday
+        }
+        const target = new Date(now);
+        target.setDate(now.getDate() + daysUntil);
+        target.setHours(20, 0, 0, 0); // Sun 20:00
+        return target;
+      }
+
+      function updateCountdown() {
+        const now = new Date();
+        // Check if is Sunday after 20:00
+        if (now.getDay() === 0 && now.getHours() >= 20) {
+          // Remove countdown, show banner
+          document.getElementById("countdown").style.display = "none";
+          let banner = document.getElementById("blubbsonntag-banner");
+          if (!banner) {
+            banner = document.createElement("div");
+            banner.id = "blubbsonntag-banner";
+            banner.className = "p-5 text-center text-3xl font-bold text-white frosted rounded-xl shadow-lg";
+            banner.innerHTML = "Jetzt ist Blubbsonntag 🎉";
+            document.getElementById("countdown-section").appendChild(banner);
+          } else {
+            banner.style.display = "";
+          }
+          return;
+        }
+
+        // Show countdown, remove banner
+        document.getElementById("countdown-section").style.display = "";
+        const banner = document.getElementById("blubbsonntag-banner");
+        if (banner) banner.style.display = "none";
+
+        // Target next Sun 20:00
+        const target = getNextSunday20(now);
+        let diff = (target - now) / 1000; // in seconds
+        diff = Math.max(0, Math.floor(diff));
+
+        const days = Math.floor(diff / (60 * 60 * 24));
+        const hours = Math.floor((diff % (60 * 60 * 24)) / 3600);
+        const minutes = Math.floor((diff % 3600) / 60);
+        const seconds = diff % 60;
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
     </script>
       
   </body>
