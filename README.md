@@ -1,5 +1,5 @@
 # Blubbsonntag
-A small blubbsonntag with contact details and recent jobs.
+A small website for the famous *Blubbsonntag*.
 
 ## Getting started
 Clone this Repository and start the dev container.
@@ -9,7 +9,6 @@ cd blubbsonntag
 docker compose up -d
 ```
 
-This starts a dev container with webserver on `localhost:3000`. You can attach to the container with:
-```
-docker compose exec blubbsonntag ash
-```
+It updates `public/output.css` when changes appear in `public/*.html` files or in `src/input.css`.
+
+To view the website during development open `public/index.html` in your browser.
