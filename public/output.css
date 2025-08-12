@@ -837,43 +837,30 @@ video {
   margin-inline-start: 0.25rem;
 }
 
-.mt-2{
-  margin-top: 0.5rem;
-}
-
-.mt-5{
-  margin-top: 1.25rem;
-}
-
-.mt-3{
-  margin-top: 0.75rem;
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .mt-4{
   margin-top: 1rem;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
+.mt-5{
+  margin-top: 1.25rem;
 }
 
 .flex{
   display: flex;
 }
 
-.size-4{
-  width: 1rem;
-  height: 1rem;
+.size-5{
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .size-6{
   width: 1.5rem;
   height: 1.5rem;
-}
-
-.size-5{
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 .h-64{
@@ -896,6 +883,10 @@ video {
   justify-content: space-between;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -910,6 +901,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -918,11 +914,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-white{
@@ -955,13 +946,15 @@ body {
   }
 }
 
-.title {
-  background: rgba(255, 255, 255, 0.2);
+.header {
+  background: black;
   border-radius: 20px;
+  margin: 0;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-image: url('header.jpg');
+  background-size: cover;
 }
 
 .gradient-overlay {
@@ -970,14 +963,14 @@ body {
   pointer-events: none;
   background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0) 0%,
         rgba(0,0,0,0) 40%,
-        rgba(0,0,0,1) 100%
+        rgba(0,0,0,.5) 100%
     );
 }
 
 .frosted {
-  background: rgba(255, 255, 255, 0.2)!important;
+  background: rgba(255, 255, 255, 10);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -986,21 +979,6 @@ body {
 }
 
 .countdown-item{
-  display: block;
-  padding: 1rem;
-  background-color: #fff;
-  border: 1px solid var(--color-accent, #f3f4f6);
-}
-
-.countdown-item.\@low,.countdown-item.\@high{
-  background-color: var(--color-fill);
-  color: var(--color-content);
-}
-
-.countdown-item{
-  overflow: hidden;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   display: flex;
   aspect-ratio: 1 / 1;
   width: 20%;
@@ -1008,11 +986,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0px;
-  margin-bottom: 1.25rem;
-  position: relative;
-  border: 0;
-  border-radius: 20px;
-  color: white;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 button{
@@ -1024,4 +999,11 @@ button{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 10px;
+}
+
+.colon {
+  height: 1.5rem;
+  opacity: .5;
+  margin-top: auto;
+  margin-bottom: auto;
 }
