@@ -1,21 +1,21 @@
-name: Deploy to SFTP
+name: Deploy website via FTP-SSL
 on:
   push:
     branches: [ "main" ]
-
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Upload to SFTP server
-        uses: Dylan700/sftp-upload-action@latest
+      - name: Deploy to FTP-SSL server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.SFTP_SERVER }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 22
-          uploads: |
-            ./public/ => /
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: /
+          local-dir: ./public/
+          security: strict
