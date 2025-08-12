@@ -64,9 +64,10 @@ body {
     @apply text-white flex flex-col items-center justify-center w-1/5 aspect-square p-0;
 }
 
-button {
+.cta-button {
     @apply flex bg-urge px-3 py-2;
     border-radius: 10px;
+    width: fit-content;
 }
 
 .colon {

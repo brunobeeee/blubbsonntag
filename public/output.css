@@ -584,50 +584,6 @@ video {
   height: 1em;
 }
 
-.button{
-  border: 1px solid var(--color-accent);
-  background-color: var(--color-muted);
-  color: var(--color-content);
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  line-height: 1.5;
-  white-space: nowrap;
-  transition: filter 75ms ease-in-out;
-  transform-origin: center;
-  text-decoration: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 0.25em 0.5em;
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  outline: none;
-}
-
-.button:hover:not([disabled]):not(.field), .button:focus:not([disabled]):not(.field){
-  filter: brightness(95%);
-}
-
-.button[disabled]{
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.button:active{
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-}
-
-.button.button-xl{
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-}
-
 .card{
   display: block;
   padding: 1rem;
@@ -833,11 +789,6 @@ video {
   margin-right: auto;
 }
 
-.my-12{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .ms-1{
   margin-inline-start: 0.25rem;
 }
@@ -905,13 +856,13 @@ video {
   padding-right: 0.75rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .text-center{
   text-align: center;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg{
@@ -932,11 +883,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold{
@@ -1023,7 +969,7 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-button{
+.cta-button{
   display: flex;
   --tw-bg-opacity: 1;
   background-color: rgb(230 72 15 / var(--tw-bg-opacity, 1));
@@ -1032,6 +978,8 @@ button{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .colon {
