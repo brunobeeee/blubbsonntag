@@ -87,3 +87,7 @@ body {
 .es-review-container {
     border-radius: 24px;
 }
+
+.es-popup-content-container {
+    background-color: rgba(0, 0, 0, .75)!important;
+}
