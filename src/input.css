@@ -3,68 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: 'Montserrat';
+    font-size: 1.15rem;
+    min-height: 100vh;
+    max-width: 500px;
+    background-color: black;
+    color: white;
+}
+
+.huge-heading {
+    @apply font-bold;
+    font-size: 2.5rem;
+}
+
 .card {
     @apply mb-5;
     position: relative;
     border: 0;
-    border-radius: 24px;
+    border-radius: 15px;
     color: white;
-}
-
-body {
-    font-family: 'Montserrat';
-    min-height: 100vh;
-    max-width: 500px;
-    background-color: #0B446F;
-    background-image: url('background.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.header {
-    background: black;
-    border-radius: 24px;
-    margin: 0;
+    background-color: #181818;
+    border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    background-image: url('header.jpg');
-    background-size: cover;
 }
 
-.gradient-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0) 40%,
-        rgba(0,0,0,.5) 100%
-    );
-}
-
-.frosted {
-    background: rgba(255, 255, 255, 10);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%);
-    border-radius: 24px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3)!important;
-}
-
+/* Countdown */
 .countdown-item {
     @apply text-white flex flex-col items-center justify-center w-1/5 aspect-square p-0;
+    margin: 0!important;
 }
-
-.cta-button {
-    @apply flex px-3 py-2;
-    background: linear-gradient(145deg, rgba(230, 72, 15, .9) 100%, rgba(230, 72, 15, 1) 0%);
-    border-radius: 10px;
-    width: fit-content;
-}
-
 .colon {
     height: 1.5rem;
     opacity: .5;
@@ -72,22 +41,27 @@ body {
     margin-bottom: auto;
 }
 
+/* Call to action button */
+.cta-button {
+    @apply flex px-3 py-2;
+    background: linear-gradient(145deg, rgba(230, 72, 15, .9) 100%, rgba(230, 72, 15, 1) 0%);
+    box-shadow: 0px 0px 50px 0px rgba(195,79,39,.25);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    width: fit-content;
+}
+
 /* Google Reviews */
 .es-review-background-container {
     color: white;
-    background: rgba(255, 255, 255, 10);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%)!important;
-    border-radius: 24px;
+    background-color: #181818!important;
+    border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3)!important;
 }
-
 .es-review-container {
-    border-radius: 24px;
+    border-radius: 15px;
 }
-
 .es-popup-content-container {
     background-color: rgba(0, 0, 0, .75)!important;
 }
