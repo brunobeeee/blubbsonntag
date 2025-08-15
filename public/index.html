@@ -11,16 +11,9 @@
   <body class="flex flex-col mx-auto px-3">
 
     <!-- Header -->
-    <section class="section my-5 ms-1 text-center">
+    <section class="section my-5 ms-1">
       <h1 class="heading huge-heading z-10">Blubbsonntag</h1>
-
-      <div class="flex opacity-75 justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>  
-        <h5 class="ms-1">jeden Sonntag, 20 Uhr</h5>
-    </div>
-
+      <p class="opacity-75">Kennen Sie Blubbsonntag?<br>Denn er ist sehr gut...</p>
     </section>
 
     <section id="countdown-section" class="section">
@@ -45,6 +38,13 @@
           <h5 class="text-xs opacity-75">Sekunden</h5>
         </div>
       </div>
+      <div class="flex ms-1 mb-5 opacity-50 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>  
+        <h5 class="ms-1 ">jeden Sonntag, 20 Uhr</h5>
+      </div>
+
     </section>
 
     <!-- Calendar -->
@@ -108,7 +108,8 @@
             banner.id = "blubbsonntag-banner";
             banner.className = "card p-5 text-center text-3xl font-bold";
             banner.innerHTML = "Jetzt ist Blubbsonntag 🎉";
-            document.getElementById("countdown-section").appendChild(banner);
+            /* append the banner to the first place in section */ 
+            document.getElementById("countdown-section").prepend(banner);
           } else {
             banner.style.display = "";
           }

@@ -831,8 +831,8 @@ video {
   flex-direction: column;
 }
 
-.justify-center{
-  justify-content: center;
+.items-center{
+  align-items: center;
 }
 
 .justify-between{
@@ -869,6 +869,10 @@ video {
 
 .font-bold{
   font-weight: 700;
+}
+
+.opacity-50{
+  opacity: 0.5;
 }
 
 .opacity-75{
