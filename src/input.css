@@ -16,6 +16,7 @@ body::before {
     inset: 0;
     z-index: -2;
     background: url('background.png') center center/cover no-repeat;
+    height: 100vh;
     filter: grayscale(1) saturate(.5) brightness(.5);
     pointer-events: none;
 }
@@ -24,6 +25,7 @@ body::after {
     position: fixed;
     inset: 0;
     z-index: -1;
+    height: 100vh;
     background: #1271ba;
     mix-blend-mode: color;
     opacity: .5;
