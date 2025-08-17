@@ -11,54 +11,48 @@
   <body class="flex flex-col mx-auto px-3">
 
     <!-- Header -->
-    <section class="section mt-5">
-      <!-- border -->
-      <div style="border: 1px solid rgba(255, 255, 255, .3)!important; border-radius: 20px;">
-        <div class="header card flex flex-col justify-end h-64 text-white">
-          <div class="gradient-overlay"></div>
-
-          <h1 class="heading text-xl z-10">Blubbsonntag</h1>
-          <div class="flex z-10 opacity-75">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            </svg>  
-            <h5 class="ms-1">jeden Sonntag, 20 Uhr</h5>
-          </div>
-        </div>
-    </div>
-
+    <section class="section my-5 ms-1">
+      <h1 class="heading huge-heading z-10">Blubbsonntag</h1>
+      <p class="opacity-75">Kennen Sie Blubbsonntag?<br>Denn er ist sehr gut...</p>
     </section>
 
-    <section id="countdown-section" class="section mt-5">
-      <div id="countdown" class="flex flex-row justify-between text-center">
-        <div class="frosted countdown-item">
+    <section id="countdown-section" class="section">
+      <div id="countdown" class="flex flex-row mb-5 justify-between text-center">
+        <div class="card countdown-item">
           <h1 id="days" class="heading">0</h1>
           <h5 class="text-xs opacity-75">Tage</h5>
         </div>
         <img src="colon.svg" alt="Doppelpunkt" class="colon" />
-        <div class="frosted countdown-item">
+        <div class="card countdown-item">
           <h1 id="hours" class="heading">0</h1>
           <h5 class="text-xs opacity-75">Stunden</h5>
         </div>
         <img src="colon.svg" alt="Doppelpunkt" class="colon" />
-        <div class="frosted countdown-item">
+        <div class="card countdown-item">
           <h1 id="minutes" class="heading">0</h1>
           <h5 class="text-xs opacity-75">Minuten</h5>
         </div>
         <img src="colon.svg" alt="Doppelpunkt" class="colon" />
-        <div class="frosted countdown-item">
+        <div class="card countdown-item">
           <h1 id="seconds" class="heading">0</h1>
           <h5 class="text-xs opacity-75">Sekunden</h5>
         </div>
       </div>
+      <div class="flex ms-1 mb-5 opacity-75 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>  
+        <h5 class="ms-1">jeden Sonntag, 20 Uhr</h5>
+      </div>
+
     </section>
 
     <!-- Calendar -->
-    <section class="section mt-5">
-      <div class="card frosted">
+    <section class="section">
+      <div class="card">
         <h1 class="heading text-lg">Abonniere jetzt den offiziellen Blubbsonntag-Kalender!</h1>
         <h5 class="text-md mt-1 opacity-75">Nie wieder Blubbsonntag vergessen...</h5>
-        <a class="cta-button frosted mt-4" href="webcal://cloud.eosander12.de/remote.php/dav/public-calendars/gqzNCj6irtR3dr83?export">
+        <a class="cta-button mt-4" href="webcal://cloud.eosander12.de/remote.php/dav/public-calendars/gqzNCj6irtR3dr83?export">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path d="M12 11.993a.75.75 0 0 0-.75.75v.006c0 .414.336.75.75.75h.006a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75H12ZM12 16.494a.75.75 0 0 0-.75.75v.005c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H12ZM8.999 17.244a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.006ZM7.499 16.494a.75.75 0 0 0-.75.75v.005c0 .414.336.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H7.5ZM13.499 14.997a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.005ZM14.25 16.494a.75.75 0 0 0-.75.75v.006c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75h-.005ZM15.75 14.995a.75.75 0 0 1 .75-.75h.005a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75H16.5a.75.75 0 0 1-.75-.75v-.006ZM13.498 12.743a.75.75 0 0 1 .75-.75h2.25a.75.75 0 1 1 0 1.5h-2.25a.75.75 0 0 1-.75-.75ZM6.748 14.993a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" />
             <path fill-rule="evenodd" d="M18 2.993a.75.75 0 0 0-1.5 0v1.5h-9V2.994a.75.75 0 1 0-1.5 0v1.497h-.752a3 3 0 0 0-3 3v11.252a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V7.492a3 3 0 0 0-3-3H18V2.993ZM3.748 18.743v-7.5a1.5 1.5 0 0 1 1.5-1.5h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-13.5a1.5 1.5 0 0 1-1.5-1.5Z" clip-rule="evenodd" />
@@ -102,6 +96,8 @@
 
       function updateCountdown() {
         const now = new Date();
+        // const now = new Date(2025, 7, 17, 20, 0, 0, 0);
+
         // Check if is Sunday after 20:00
         if (now.getDay() === 0 && now.getHours() >= 20) {
           // Remove countdown, show banner
@@ -110,9 +106,10 @@
           if (!banner) {
             banner = document.createElement("div");
             banner.id = "blubbsonntag-banner";
-            banner.className = "p-5 text-center text-3xl font-bold text-white frosted rounded-xl shadow-lg";
+            banner.className = "card p-5 text-center text-3xl font-bold";
             banner.innerHTML = "Jetzt ist Blubbsonntag 🎉";
-            document.getElementById("countdown-section").appendChild(banner);
+            /* append the banner to the first place in section */ 
+            document.getElementById("countdown-section").prepend(banner);
           } else {
             banner.style.display = "";
           }
