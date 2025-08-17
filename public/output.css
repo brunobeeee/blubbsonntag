@@ -871,10 +871,6 @@ video {
   font-weight: 700;
 }
 
-.opacity-50{
-  opacity: 0.5;
-}
-
 .opacity-75{
   opacity: 0.75;
 }
@@ -882,10 +878,30 @@ video {
 body {
   font-family: 'Montserrat';
   font-size: 1.15rem;
+  color: white;
   min-height: 100vh;
   max-width: 500px;
-  background-color: black;
-  color: white;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: url('background.png') center center/cover no-repeat;
+  filter: grayscale(1) saturate(.5) brightness(.5);
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #1271ba;
+  mix-blend-mode: color;
+  opacity: .5;
+  pointer-events: none;
 }
 
 .huge-heading{
@@ -896,10 +912,11 @@ body {
 .card{
   margin-bottom: 1.25rem;
   position: relative;
-  border: 0;
-  color: white;
-  background-color: #181818;
   border-radius: 15px;
+  color: white;
+  background: rgba(255, 255, 255, 10);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%);
+  border: 1px solid rgba(255, 255, 255, 0.3)!important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -947,9 +964,11 @@ body {
 /* Google Reviews */
 
 .es-review-background-container {
-  color: white;
-  background-color: #181818!important;
   border-radius: 15px;
+  color: white;
+  background: rgba(255, 255, 255, 10)!important;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, .4) 0%)!important;
+  border: 1px solid rgba(255, 255, 255, 0.3)!important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
