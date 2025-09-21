@@ -83,7 +83,7 @@
         document.documentElement.classList.remove('dark');
       }
 
-      function getNextSunday20(now) {
+      function getNextEvent(now) {
         // Sun is 0 in JavaScript Date
         const day = now.getDay();
         let daysUntil = (7 - day); // Days until next Sun
@@ -95,7 +95,7 @@
         }
         const target = new Date(now);
         target.setDate(now.getDate() + daysUntil);
-        target.setHours(20, 0, 0, 0); // Sun 20:00
+        target.setHours(13, 0, 0, 0); // Sun 20:00
         return target;
       }
 
@@ -126,8 +126,8 @@
         const banner = document.getElementById("blubbsonntag-banner");
         if (banner) banner.style.display = "none";
 
-        // Target next Sun 20:00
-        const target = getNextSunday20(now);
+        // Target next Blubbsonntag event
+        const target = getNextEvent(now);
         let diff = (target - now) / 1000; // in seconds
         diff = Math.max(0, Math.floor(diff));
 
