@@ -87,10 +87,10 @@
         // Sun is 0 in JavaScript Date
         const day = now.getDay();
         let daysUntil = (7 - day); // Days until next Sun
-        if (day === 0 && now.getHours() < 20) {
+        if (day === 0 && now.getHours() < 13) {
           daysUntil = 0; // Now is Sun but before 20
         }
-        if (day === 0 && now.getHours() >= 20) {
+        if (day === 0 && now.getHours() >= 13) {
           daysUntil = 7; // After 20 on Sunday, next Sunday
         }
         const target = new Date(now);
@@ -101,10 +101,10 @@
 
       function updateCountdown() {
         const now = new Date();
-        // const now = new Date(2025, 7, 17, 20, 0, 0, 0);
+        // const now = new Date(2025, 7, 17, 13, 0, 0, 0);
 
-        // Check if is Sunday after 20:00
-        if (now.getDay() === 0 && now.getHours() >= 20) {
+        // Check if is Sunday after 13:00
+        if (now.getDay() === 0 && now.getHours() >= 13) {
           // Remove countdown, show banner
           document.getElementById("countdown").style.display = "none";
           let banner = document.getElementById("blubbsonntag-banner");
